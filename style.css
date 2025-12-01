@@ -1,0 +1,481 @@
+/* 重置浏览器默认样式 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 全局风格 */
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:white;
+    color: rgb(84, 84, 84);
+    line-height: 1.6;
+}
+/* 模块标题样式 */
+.section h2{
+    font-size: 28px;
+    color: rgb(62, 91, 118);
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+/* 导航栏 */
+.main{
+   width: 100%;
+   overflow: hidden;
+   padding-top: 70px;
+}
+.nav{
+    background-color: rgb(252, 194, 69,0.95);
+    text-align: center;
+    justify-content: space-around;
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    height: 80px;
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    width: 99%;
+    z-index: 999;
+    display: flex;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.nav a{
+    color: white;
+    margin: 0 ;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 200;
+}
+.house{
+    color: rgb(159, 160, 160);
+}
+.nav a:hover{
+    color: rgb(159, 160, 160);
+    margin: 0;
+    background-color: rgb(255, 159, 64);
+    border-radius: 10px;
+    width: auto;
+}
+/* 二维码 */
+.hover-qr{
+    position:relative;
+}
+.qr-img{
+    position: fixed;
+    top: 70px;
+    left: 75px;
+    width: 200px;
+    height: 200px;
+    border: 4px solid rgb(255, 159, 64);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.5s ease;
+   
+}
+.hover-qr:hover .qr-img{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+/* 头部 */
+.overlay-img{
+    position: absolute;
+    top: 200px;
+    left: 500px;
+    width: 400px;
+    transition: all 0.5s ease;
+}
+.overlay-img:hover{
+    transform: scale(1.3);
+}
+/* Introduction模块 */
+.intro-section{
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* 卡片样式 */
+.card{
+    background-color: white;
+    border:5px solid rgb(106, 106, 106);
+    border-radius: 8px;
+    padding: 50px;
+    margin: 120px;
+    width: calc(50%-30px);
+    box-shadow: 0 3px 8px;
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s ease-in-out;
+}
+.intro-section h2{
+    font-size: 55px;
+    text-align: center;
+    color: rgb(3, 21, 113);
+    font-weight:180;
+}
+.card h3{
+    font-size: 40px;
+}
+.card .quote1{
+    color: rgb(99, 171, 242);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.card .quote2{
+    color: rgb(255, 140, 236);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.card .quote3{
+    color: rgb(73, 201, 203);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.card .quote4{
+    color: rgb(255, 153, 170);
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.card-img{
+    width: 400px;
+    height: auto;
+}
+.card-img:hover{
+    transform:rotate(-5deg);
+}
+.card-left{
+    flex-direction: row;
+}
+.card-right{
+    flex-direction: row-reverse;
+}
+.card-text{
+    flex: 1;
+    min-width: 0;
+    font-size: 25px;
+    color: black;
+}
+.card:hover{
+    transform: scale(1.03);
+}
+/* About Us  */
+.about-section{
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.outer-box{
+    border: 5px solid rgb(110, 108, 108);
+    border-radius: 12px;
+    padding: 80px;
+    margin: 120px ;
+    background-color: rgb(255, 254, 250);
+    position: relative;
+}
+/* 装饰 */
+.angle1{
+    position: absolute;
+    width: 180px;
+}
+.angle2{
+    position: absolute;
+    width: 180px;
+}
+.angle3{
+    position: absolute;
+    width: 180px;
+}
+.angle4{
+    position: absolute;
+    width: 180px;
+}
+.angle2{
+    top: -10px;
+    right: -45px;
+}
+.angle1{
+    top:-10px;
+    left: -45px;
+    transform: scaleX(-1);
+}
+.angle3{
+    bottom: -10px;
+    right: -45px;
+    transform: scaleY(-1);
+}
+.angle4{
+    bottom: -10px;
+    left: -45px;
+    transform: scaleX(-1)scaleY(-1);
+}
+.butterfly{
+    width: 180px;
+    transition: transform 0.5s ease;
+}
+.butterfly-container{
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    display: inline-block;
+}
+.butterfly-text{
+    position:absolute;
+    left: calc(100%+8px);
+    top: 80%;
+    transform:translateY(-50%);
+    white-space: nowrap;
+    background:rgb(121, 121, 121);
+    padding: 3px 8px;
+    border: 1px solid white;
+    color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.butterfly-container:hover .butterfly{
+    transform: translateY(8px);
+}
+.butterfly-container:hover .butterfly-text{
+    opacity: 1;
+    visibility: visible;
+}
+/* 内容 */
+.feature-group{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: black;
+}
+.feature-card{
+    background-color: rgb(255, 254, 250);
+    border:2px solid ;
+    border-radius: 15px;
+    padding: 20px;
+    width: 180px;
+    text-align: center;
+    border: 5px solid rgb(154, 77, 154);
+    transition: all 0.3s ease-in-out;
+}
+.feature-card img{
+    width: 60px;
+}
+.outer-box h2{
+    color: rgb(135, 132, 132);
+    font-size: 70px;
+    font-weight: lighter;
+}
+.feature-card:hover{
+    transform: scale(1.1);
+}
+/* Contact US模块 */
+.contact-section{
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.contact-info{
+    background-color: white;
+    border:5px solid rgb(3, 95, 74);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px;
+    padding: 50px;
+    margin: 140px;
+    font-size: larger;
+    position: relative;
+}
+.contact-content{
+    max-width: 600px;
+    margin: 0 auto;
+    color: black;
+}
+.contact-content h2{
+    text-align: center;
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.contact-info .ps{
+    font-size: 15px;
+    color: rgb(118, 118, 118);
+}
+/* 按钮 */
+.contact-buttons{
+    text-align: center;
+    pointer-events: auto;
+}
+.contact-buttons .btn{
+    background: green;
+    color:white;
+    padding: 8px 15px;
+    margin: 0 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer ;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 3px 8px;
+}
+.contact-buttons .btn:hover{
+    transform: scale(1.1);
+    color: rgb(203, 203, 203);
+}
+.copy-toast{
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    background: rgb(76, 75, 75);
+    color: white;
+    border-radius: 4px;
+    z-index: 99999;
+    display: none;
+}
+.confirm-btn{
+    margin-left: 12px;
+    padding: 2px 6px;
+    background-color: rgb(14, 103, 228);
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+/* 装饰 */
+.tree1{
+    width: 200px;
+    position: absolute;
+    left: -5px;
+    top: -40px;
+}
+.tree2{
+    width: 180px;
+    position: absolute;
+    right: -50px;
+    top: -2px;
+}
+.leaves{
+    width: 50px;
+    position: absolute;
+    left: 320px;
+    top: 100px;
+}
+.ladybug{
+    width: 70px;
+    position: absolute;
+    left: -20px;
+    bottom: -15px;
+}
+.chameleon{
+    width: 500px;
+    position: absolute;
+    right: 70px;
+    bottom: -50px;
+}
+/* Q&A模块 */
+.qa-section{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 40px;
+    background-color: white;
+    background-image: url("./image/background_QA.png");
+    background-size: 200% auto;
+    background-position:left top;
+    background-repeat: no-repeat;
+    border: 5px solid rgb(85, 125, 248);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.qa-section h2{
+    text-align: center;
+    font-size: 55px;
+    font-weight:normal;
+    color: black;
+    margin-top: 30px;
+}
+.qa-list{
+    width: 60%;
+    margin: 120px auto;
+    position: relative;
+}
+.qa-list li{
+    list-style-position: inside;
+    line-height: 2.5;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+    padding: left 50px ;
+    width: 60%;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.qa-list li:hover{
+    transform: scale(1.02);
+    color: rgb(127, 128, 129);
+}
+.qa-answer{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.35s ease;
+    margin-top: 8px;
+    padding: 0 18px;
+    background-color: rgb(103, 178, 240);
+    color: white;
+    border-radius: 8px;
+    width: 600px;
+    margin: 5px auto 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    white-space: normal;
+}
+.qa-list li:active .qa-answer{
+    height: auto;
+    opacity: 1;
+    padding: 15px 18px;
+}
+
+/* 底部版权 */
+.footer{
+    border-top: 1px solid rgb(173, 172, 172);
+    background-color: rgb(240, 241, 242);
+    padding: 15px 0;
+    margin-top: 35px;
+}
+.footer-content{
+    text-align: center;
+    font-size: 12px;
+    color: black;
+}
+.back-top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+    font-size: 20px;
+}
